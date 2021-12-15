@@ -664,7 +664,7 @@
             this.encabezado.BackColor = System.Drawing.Color.SeaGreen;
             this.encabezado.Location = new System.Drawing.Point(168, 21);
             this.encabezado.Name = "encabezado";
-            this.encabezado.Size = new System.Drawing.Size(790, 649);
+            this.encabezado.Size = new System.Drawing.Size(792, 649);
             this.encabezado.TabIndex = 2;
             this.encabezado.Paint += new System.Windows.Forms.PaintEventHandler(this.encabezado_Paint);
             // 
@@ -709,7 +709,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(960, 690);
+            this.ClientSize = new System.Drawing.Size(961, 690);
             this.Controls.Add(this.transparent);
             this.Controls.Add(this.arriba);
             this.Controls.Add(this.abajo);

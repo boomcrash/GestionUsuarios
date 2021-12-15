@@ -14,3 +14,4 @@ C:\Users\MILTON\Desktop\proyectos\gestionUsuarios\GestionUsuarios\bin\Debug\Buni
 C:\Users\MILTON\Desktop\proyectos\gestionUsuarios\GestionUsuarios\obj\Debug\GestionUsuarios.Properties.Resources.resources
 C:\Users\MILTON\Desktop\proyectos\gestionUsuarios\GestionUsuarios\obj\Debug\GestionUsuarios.csproj.CoreCompileInputs.cache
 C:\Users\MILTON\Desktop\proyectos\gestionUsuarios\GestionUsuarios\obj\Debug\GestionUsuarios.csproj.CopyComplete
+C:\Users\MILTON\Desktop\proyectos\gestionUsuarios\GestionUsuarios\obj\Debug\GestionUsuarios.Vistas.CardUser.resources
