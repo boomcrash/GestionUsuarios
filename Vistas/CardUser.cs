@@ -71,8 +71,7 @@ namespace GestionUsuarios.Vistas
 
         private void cliente_Paint(object sender, PaintEventArgs e)
         {
-            cliente.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, cliente.Width,
-        cliente.Height, 50, 50));
+
         }
 
         private void empleado_MouseClick(object sender, MouseEventArgs e)
@@ -135,23 +134,23 @@ namespace GestionUsuarios.Vistas
 
             if (valor == 0)
             {
-                btnempleado.BackColor= ColorTranslator.FromHtml("#DC5356");
-                btnadmin.BackColor = ColorTranslator.FromHtml("#DC5356");
-                btncliente.BackColor = ColorTranslator.FromHtml("#DC5356");
+                panel2.BackColor = ColorTranslator.FromHtml("#DC5356");
                 empleado.BackColor = ColorTranslator.FromHtml("#DC5356");
                 administrador.BackColor = ColorTranslator.FromHtml("#DC5356");
-                cliente.BackColor = ColorTranslator.FromHtml("#DC5356");
                 valor++;
             }else if (valor!=0)
             {
-                btnempleado.BackColor = ColorTranslator.FromHtml("#1A2125");
-                btnadmin.BackColor = ColorTranslator.FromHtml("#1A2125");
-                btncliente.BackColor = ColorTranslator.FromHtml("#1A2125");
+                panel2.BackColor = ColorTranslator.FromHtml("#1A2125");
                 empleado.BackColor = ColorTranslator.FromHtml("#1A2125");
                 administrador.BackColor = ColorTranslator.FromHtml("#1A2125");
-                cliente.BackColor = ColorTranslator.FromHtml("#1A2125");
+   
                 valor = 0;
             }
+        }
+
+        private void bunifuiOSSwitch1_OnValueChange(object sender, EventArgs e)
+        {
+
         }
     }
 }
