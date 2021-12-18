@@ -93,7 +93,7 @@ namespace GestionUsuarios.Datos
             }
         }
 
-        public bool MostrarPersonal(ref DataTable dt, int desde,int hasta)
+        public void MostrarPersonal(ref DataTable dt, int desde,int hasta)
         {
             try
             {
@@ -103,12 +103,12 @@ namespace GestionUsuarios.Datos
                 da.SelectCommand.Parameters.AddWithValue("@Desde", desde);
                 da.SelectCommand.Parameters.AddWithValue("@Hasta", hasta);
                 da.Fill(dt);
-                return true;
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace);
-                return false;
+
             }
             finally
             {
@@ -116,7 +116,7 @@ namespace GestionUsuarios.Datos
             }
         }
         
-        public bool BuscarPersonal(ref DataTable dt, int desde, int hasta, string buscador)
+        public void BuscarPersonal(ref DataTable dt, int desde, int hasta, string buscador)
         {
             try
             {
@@ -127,12 +127,11 @@ namespace GestionUsuarios.Datos
                 da.SelectCommand.Parameters.AddWithValue("@Hasta", hasta);
                 da.SelectCommand.Parameters.AddWithValue("@buscador", buscador);
                 da.Fill(dt);
-                return true;
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace);
-                return false;
             }
             finally
             {

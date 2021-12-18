@@ -15,3 +15,5 @@ C:\Users\MILTON\Desktop\proyectos\gestionUsuarios\GestionUsuarios\obj\Debug\Gest
 C:\Users\MILTON\Desktop\proyectos\gestionUsuarios\GestionUsuarios\obj\Debug\GestionUsuarios.csproj.CoreCompileInputs.cache
 C:\Users\MILTON\Desktop\proyectos\gestionUsuarios\GestionUsuarios\obj\Debug\GestionUsuarios.csproj.CopyComplete
 C:\Users\MILTON\Desktop\proyectos\gestionUsuarios\GestionUsuarios\obj\Debug\GestionUsuarios.Vistas.CardUser.resources
+C:\Users\MILTON\Desktop\proyectos\gestionUsuarios\GestionUsuarios\obj\Debug\GestionUsuarios.controladores.InsertarCargo.resources
+C:\Users\MILTON\Desktop\proyectos\gestionUsuarios\GestionUsuarios\obj\Debug\GestionUsuarios.controladores.MostrarCargo.resources

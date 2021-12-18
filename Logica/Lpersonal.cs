@@ -19,7 +19,7 @@ namespace GestionUsuarios.Logica
 
 		public int id_personal { get; set; }
 		public string Nombres { get; set; }
-		public int Identificacion { get; set; }
+		public string Identificacion { get; set; }
 		public string Pais { get; set; }
 		public int id_cargo { get; set; }
 		public double SueldoPorHora { get; set; }

@@ -31,7 +31,9 @@ namespace GestionUsuarios.Vistas
         public MenuPrincipal()
         {
             InitializeComponent();
-            Submenu();
+         
+            Submenu(submenu);
+            submenu2.Visible = false;
             this.BackColor = Color.LimeGreen;
             this.TransparencyKey = Color.LimeGreen;
         }
@@ -44,13 +46,13 @@ namespace GestionUsuarios.Vistas
 
         }
 
-        private void Submenu()
+        private void Submenu(Panel Submenu)
         {
             submenu.Visible = false;
 
         }
 
-        private void ocultarSubmenu()
+        private void ocultarSubmenu(Panel subemnu)
         {
             if (submenu.Visible == true)
             {
@@ -95,7 +97,8 @@ namespace GestionUsuarios.Vistas
 
         private void mostrar_Click(object sender, EventArgs e)
         {
-            ocultarSubmenu();
+
+            ocultarSubmenu(submenu);
             Personal control = new Personal();
             panelPrincipal.Controls.Clear();
             panelPrincipal.Controls.Add(control);
@@ -106,7 +109,8 @@ namespace GestionUsuarios.Vistas
 
         private void insertar_Click(object sender, EventArgs e)
         {
-            ocultarSubmenu();
+
+            ocultarSubmenu(submenu);
             InsertarPersonal control = new InsertarPersonal();
             panelPrincipal.Controls.Clear();
             panelPrincipal.Controls.Add(control);
@@ -116,12 +120,14 @@ namespace GestionUsuarios.Vistas
 
         private void modificar_Click(object sender, EventArgs e)
         {
-            ocultarSubmenu();
+
+            ocultarSubmenu(submenu);
         }
 
         private void eliminar_Click(object sender, EventArgs e)
         {
-            ocultarSubmenu();
+  
+            ocultarSubmenu(submenu);
         }
 
         public void panel_Principal_Paint(object sender, PaintEventArgs e)
@@ -133,7 +139,9 @@ namespace GestionUsuarios.Vistas
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
+            submenu2.Visible = false;
             mostrarSubmenu(submenu);
+           
         }
 
         private void encabezado_Paint(object sender, PaintEventArgs e)
@@ -166,6 +174,33 @@ namespace GestionUsuarios.Vistas
         {
             arriba.BackColor = Color.LimeGreen;
             this.TransparencyKey = Color.LimeGreen;
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            
+            ocultarSubmenu(submenu);
+            mostrarSubmenu(submenu2);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            ocultarSubmenu(submenu2);
+            MostrarCargo control = new MostrarCargo();
+            panelPrincipal.Controls.Clear();
+            panelPrincipal.Controls.Add(control);
+            control.Dock = DockStyle.Fill;
+            panelPrincipal.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            ocultarSubmenu(submenu2);
+            InsertarCargo control = new InsertarCargo();
+            panelPrincipal.Controls.Clear();
+            panelPrincipal.Controls.Add(control);
+            control.Dock = DockStyle.Fill;
+            panelPrincipal.Show();
         }
     }
 }

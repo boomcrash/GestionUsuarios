@@ -31,21 +31,20 @@
             this.panelRegistros = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pais = new System.Windows.Forms.ComboBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.sueldo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.cargo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.nombre = new System.Windows.Forms.TextBox();
+            this.cedula = new System.Windows.Forms.TextBox();
             this.panelRegistros.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +60,7 @@
             this.panelRegistros.Name = "panelRegistros";
             this.panelRegistros.Size = new System.Drawing.Size(800, 595);
             this.panelRegistros.TabIndex = 4;
+            this.panelRegistros.Paint += new System.Windows.Forms.PaintEventHandler(this.panelRegistros_Paint);
             // 
             // button3
             // 
@@ -85,41 +85,26 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.panel9);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.pais);
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.sueldo);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.cargo);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.nombre);
+            this.panel1.Controls.Add(this.cedula);
             this.panel1.Location = new System.Drawing.Point(67, 98);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(662, 391);
             this.panel1.TabIndex = 17;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.SeaGreen;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(447, 178);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 26);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Agregar Cargo";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // panel9
             // 
@@ -130,16 +115,16 @@
             this.panel9.Size = new System.Drawing.Size(367, 2);
             this.panel9.TabIndex = 14;
             // 
-            // comboBox1
+            // pais
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(236, 145);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(367, 28);
-            this.comboBox1.TabIndex = 15;
+            this.pais.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.pais.ForeColor = System.Drawing.Color.White;
+            this.pais.FormattingEnabled = true;
+            this.pais.Location = new System.Drawing.Point(236, 145);
+            this.pais.Name = "pais";
+            this.pais.Size = new System.Drawing.Size(367, 28);
+            this.pais.TabIndex = 15;
             // 
             // panel8
             // 
@@ -192,16 +177,17 @@
             this.panel5.Size = new System.Drawing.Size(367, 2);
             this.panel5.TabIndex = 6;
             // 
-            // textBox6
+            // sueldo
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.ForeColor = System.Drawing.Color.White;
-            this.textBox6.Location = new System.Drawing.Point(236, 221);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(367, 19);
-            this.textBox6.TabIndex = 13;
+            this.sueldo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.sueldo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.sueldo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.sueldo.ForeColor = System.Drawing.Color.White;
+            this.sueldo.Location = new System.Drawing.Point(236, 221);
+            this.sueldo.Name = "sueldo";
+            this.sueldo.Size = new System.Drawing.Size(367, 19);
+            this.sueldo.TabIndex = 13;
+            this.sueldo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sueldo_KeyPress);
             // 
             // label3
             // 
@@ -227,16 +213,16 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Cargo:";
             // 
-            // textBox5
+            // cargo
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.ForeColor = System.Drawing.Color.White;
-            this.textBox5.Location = new System.Drawing.Point(236, 185);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(205, 19);
-            this.textBox5.TabIndex = 11;
+            this.cargo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.cargo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cargo.ForeColor = System.Drawing.Color.White;
+            this.cargo.Location = new System.Drawing.Point(236, 185);
+            this.cargo.Name = "cargo";
+            this.cargo.Size = new System.Drawing.Size(367, 19);
+            this.cargo.TabIndex = 11;
             // 
             // label5
             // 
@@ -250,27 +236,27 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Sueldo/hr:";
             // 
-            // textBox2
+            // nombre
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(236, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(367, 19);
-            this.textBox2.TabIndex = 5;
+            this.nombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nombre.ForeColor = System.Drawing.Color.White;
+            this.nombre.Location = new System.Drawing.Point(236, 83);
+            this.nombre.Name = "nombre";
+            this.nombre.Size = new System.Drawing.Size(367, 19);
+            this.nombre.TabIndex = 5;
             // 
-            // textBox3
+            // cedula
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(236, 116);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(367, 19);
-            this.textBox3.TabIndex = 7;
+            this.cedula.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cedula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.cedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cedula.ForeColor = System.Drawing.Color.White;
+            this.cedula.Location = new System.Drawing.Point(236, 116);
+            this.cedula.Name = "cedula";
+            this.cedula.Size = new System.Drawing.Size(367, 19);
+            this.cedula.TabIndex = 7;
             // 
             // InsertarPersonal
             // 
@@ -291,16 +277,15 @@
         #endregion
 
         private System.Windows.Forms.Panel panelRegistros;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox pais;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox sueldo;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox cargo;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox cedula;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox nombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

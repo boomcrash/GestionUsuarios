@@ -58,11 +58,23 @@
     <Compile Include="controladores\Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="controladores\InsertarCargo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controladores\InsertarCargo.Designer.cs">
+      <DependentUpon>InsertarCargo.cs</DependentUpon>
+    </Compile>
     <Compile Include="controladores\InsertarPersonal.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="controladores\InsertarPersonal.Designer.cs">
       <DependentUpon>InsertarPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controladores\MostrarCargo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controladores\MostrarCargo.Designer.cs">
+      <DependentUpon>MostrarCargo.cs</DependentUpon>
     </Compile>
     <Compile Include="controladores\Personal.cs">
       <SubType>UserControl</SubType>
@@ -71,6 +83,7 @@
       <DependentUpon>Personal.cs</DependentUpon>
     </Compile>
     <Compile Include="Datos\Conexion.cs" />
+    <Compile Include="Datos\Dcargos.cs" />
     <Compile Include="Datos\Dpersonal.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -78,6 +91,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica\Base.cs" />
+    <Compile Include="Logica\Lcargos.cs" />
     <Compile Include="Logica\Lpersonal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,8 +111,14 @@
     <EmbeddedResource Include="controladores\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="controladores\InsertarCargo.resx">
+      <DependentUpon>InsertarCargo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="controladores\InsertarPersonal.resx">
       <DependentUpon>InsertarPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controladores\MostrarCargo.resx">
+      <DependentUpon>MostrarCargo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controladores\Personal.resx">
       <DependentUpon>Personal.cs</DependentUpon>
@@ -181,6 +202,7 @@
     <Content Include="Resources\boton.png" />
     <Content Include="Resources\boton2.png" />
     <Content Include="Resources\boton3.png" />
+    <None Include="Resources\rango.png" />
     <None Include="Resources\client.png" />
     <None Include="Resources\engineer.png" />
     <Content Include="Resources\graficoone.png" />

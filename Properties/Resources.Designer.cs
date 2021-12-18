@@ -303,6 +303,16 @@ namespace GestionUsuarios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rango {
+            get {
+                object obj = ResourceManager.GetObject("rango", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap registros {
             get {
                 object obj = ResourceManager.GetObject("registros", resourceCulture);
