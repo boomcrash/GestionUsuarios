@@ -137,18 +137,38 @@ namespace GestionUsuarios.Vistas
                 panel2.BackColor = ColorTranslator.FromHtml("#DC5356");
                 empleado.BackColor = ColorTranslator.FromHtml("#DC5356");
                 administrador.BackColor = ColorTranslator.FromHtml("#DC5356");
+                Pregistro.ForeColor = ColorTranslator.FromHtml("#DC5356");
+                Pregistro.IdleLineColor = ColorTranslator.FromHtml("#DC5356");
+                Cregistro.ForeColor = ColorTranslator.FromHtml("#DC5356");
+                Cregistro.IdleLineColor = ColorTranslator.FromHtml("#DC5356");
+                btnempleado.IdleLineColor = ColorTranslator.FromHtml("#DC5356");
+                btnclient.IdleLineColor = ColorTranslator.FromHtml("#DC5356");
+                Pregistro.IdleFillColor = ColorTranslator.FromHtml("#DC5356");
+                Cregistro.IdleFillColor = ColorTranslator.FromHtml("#DC5356");
                 valor++;
             }else if (valor!=0)
             {
                 panel2.BackColor = ColorTranslator.FromHtml("#1A2125");
                 empleado.BackColor = ColorTranslator.FromHtml("#1A2125");
                 administrador.BackColor = ColorTranslator.FromHtml("#1A2125");
-   
+                btnempleado.IdleLineColor= ColorTranslator.FromHtml("#1A2125");
+                btnclient.IdleLineColor = ColorTranslator.FromHtml("#1A2125");
+                Pregistro.ForeColor = ColorTranslator.FromHtml("#1A2125");
+                Pregistro.IdleLineColor = ColorTranslator.FromHtml("#1A2125");
+                Cregistro.ForeColor = ColorTranslator.FromHtml("#1A2125");
+                Cregistro.IdleLineColor = ColorTranslator.FromHtml("#1A2125");
+                Pregistro.IdleFillColor = ColorTranslator.FromHtml("#1A2125");
+                Cregistro.IdleFillColor = ColorTranslator.FromHtml("#1A2125");
                 valor = 0;
             }
         }
 
         private void bunifuiOSSwitch1_OnValueChange(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
         {
 
         }

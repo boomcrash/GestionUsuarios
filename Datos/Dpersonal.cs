@@ -115,7 +115,24 @@ namespace GestionUsuarios.Datos
                 Conexion.cerrar();
             }
         }
-        
+        public void contarPersonal(ref int contador)
+        {
+            try
+            {
+                Conexion.abrir();
+                SqlCommand cmd = new SqlCommand("select count(id_personal) from Personal", Conexion.conectar);
+                contador = Convert.ToInt32(cmd.ExecuteScalar());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+
+            }
+            finally
+            {
+                Conexion.cerrar();
+            }
+        }
         public void BuscarPersonal(ref DataTable dt, int desde, int hasta, string buscador)
         {
             try
@@ -138,5 +155,27 @@ namespace GestionUsuarios.Datos
                 Conexion.cerrar();
             }
         }
+
+        public void BuscarPersonalIdentificacion(ref DataTable dt, string buscador)
+        {
+            try
+            {
+                Conexion.abrir();
+                SqlDataAdapter da = new SqlDataAdapter("BuscarPersonalIdentidaad", Conexion.conectar);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@buscador", buscador);
+                da.Fill(dt);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+            }
+            finally
+            {
+                Conexion.cerrar();
+            }
+        }
+       
     }
 }

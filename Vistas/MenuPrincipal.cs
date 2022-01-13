@@ -120,13 +120,23 @@ namespace GestionUsuarios.Vistas
 
         private void modificar_Click(object sender, EventArgs e)
         {
-
+            ocultarSubmenu(submenu);
+            ModificarPersonal control = new ModificarPersonal();
+            panelPrincipal.Controls.Clear();
+            panelPrincipal.Controls.Add(control);
+            control.Dock = DockStyle.Fill;
+            panelPrincipal.Show();
             ocultarSubmenu(submenu);
         }
 
         private void eliminar_Click(object sender, EventArgs e)
         {
-  
+            ocultarSubmenu(submenu);
+            EliminarPersonal control = new EliminarPersonal();
+            panelPrincipal.Controls.Clear();
+            panelPrincipal.Controls.Add(control);
+            control.Dock = DockStyle.Fill;
+            panelPrincipal.Show();
             ocultarSubmenu(submenu);
         }
 
@@ -201,6 +211,30 @@ namespace GestionUsuarios.Vistas
             panelPrincipal.Controls.Add(control);
             control.Dock = DockStyle.Fill;
             panelPrincipal.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            ocultarSubmenu(submenu2);
+            EditarCargo control = new EditarCargo();
+            panelPrincipal.Controls.Clear();
+            panelPrincipal.Controls.Add(control);
+            control.Dock = DockStyle.Fill;
+            panelPrincipal.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Asistencias control = new Asistencias();
+            panelPrincipal.Controls.Clear();
+            panelPrincipal.Controls.Add(control);
+            control.Dock = DockStyle.Fill;
+            panelPrincipal.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

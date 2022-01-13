@@ -31,7 +31,33 @@ namespace GestionUsuarios.controladores
         public InsertarPersonal()
         {
             InitializeComponent();
+            Buscar();
+            Cnombre.Enabled = false;
+            Csueldo.Enabled = false;
         }
+
+        int Cid;
+
+        private void Buscar()
+        {
+            DataTable tabla = new DataTable();
+            Dcargos funcion = new Dcargos();
+            funcion.BuscarCargos(ref tabla, cargo2.Text);
+            tbcargo.DataSource = tabla;
+            Base.DiseñoDtv(ref tbcargo);
+        }
+
+
+        private void ObtenerCargo()
+        {
+            Cid = Convert.ToInt32(tbcargo.SelectedCells[1].Value);
+            Cnombre.Text = tbcargo.SelectedCells[2].Value.ToString();
+            Csueldo.Text = tbcargo.SelectedCells[3].Value.ToString();
+            Cnombre.Focus();
+            Cnombre.SelectAll();
+        }
+
+
 
         private void InsertarPersonal_Load(object sender, EventArgs e)
         {
@@ -55,11 +81,51 @@ namespace GestionUsuarios.controladores
             parametros.Nombres = nombre.Text;
             parametros.Identificacion = cedula.Text;
             parametros.Pais = pais.Text;
+            parametros.id_cargo = Cid;
+            parametros.SueldoPorHora = Convert.ToDouble(Csueldo.Text);
+            if(nombre.Text!=null&&cedula.Text != null&& pais.Text != null)
+            {
+                if (Cnombre.Text != null && Csueldo.Text != null)
+                {
+                    if (funcion.InsertarPersonal(parametros) == true)
+                    {
+                        Cid = 0;
+                        Cnombre.Clear();
+                        Csueldo.Clear();
+                        MessageBox.Show("REGISTRO EXITOSO");
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERROR DE REGISTRO");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("ELIJA UN CARGO DE A TABLA PARA PODER REGISTRAR PERSONAL");
+                }
+            }
+            
+            
         }
 
         private void sueldo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Base.Decimales(sueldo, e);
+            Base.Decimales(Csueldo, e);
+        }
+
+        private void tbcargo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ObtenerCargo();
+        }
+
+        private void tbcargo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Buscar();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Insertar();
         }
     }
 }

@@ -17,6 +17,7 @@ namespace GestionUsuarios.controladores
         public MostrarCargo()
         {
             InitializeComponent();
+            Buscar();
         }
 
         private void cargo_Paint(object sender, PaintEventArgs e)
@@ -33,6 +34,11 @@ namespace GestionUsuarios.controladores
         }
 
         private void btncargo_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cargo2_KeyPress(object sender, KeyPressEventArgs e)
         {
             Buscar();
         }

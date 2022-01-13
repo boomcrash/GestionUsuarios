@@ -32,10 +32,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.cargo2 = new System.Windows.Forms.TextBox();
             this.tbcargo = new System.Windows.Forms.DataGridView();
-            this.btncargo = new System.Windows.Forms.Button();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Cargos = new System.Windows.Forms.DataGridViewImageColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cargo.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbcargo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cargo
@@ -57,9 +60,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.cargo2);
             this.panel1.Controls.Add(this.tbcargo);
-            this.panel1.Controls.Add(this.btncargo);
             this.panel1.Location = new System.Drawing.Point(67, 98);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
@@ -72,10 +75,12 @@
             this.cargo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             this.cargo2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cargo2.ForeColor = System.Drawing.Color.White;
-            this.cargo2.Location = new System.Drawing.Point(268, 32);
+            this.cargo2.Location = new System.Drawing.Point(245, 81);
             this.cargo2.Name = "cargo2";
-            this.cargo2.Size = new System.Drawing.Size(143, 19);
+            this.cargo2.Size = new System.Drawing.Size(152, 19);
             this.cargo2.TabIndex = 25;
+            this.cargo2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cargo2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cargo2_KeyPress);
             // 
             // tbcargo
             // 
@@ -83,26 +88,39 @@
             this.tbcargo.AllowUserToDeleteRows = false;
             this.tbcargo.AllowUserToResizeRows = false;
             this.tbcargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tbcargo.Location = new System.Drawing.Point(188, 75);
+            this.tbcargo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cargos});
+            this.tbcargo.Location = new System.Drawing.Point(213, 130);
             this.tbcargo.Name = "tbcargo";
+            this.tbcargo.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
+            this.tbcargo.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbcargo.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            this.tbcargo.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.SeaGreen;
             this.tbcargo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tbcargo.Size = new System.Drawing.Size(306, 186);
+            this.tbcargo.Size = new System.Drawing.Size(244, 186);
             this.tbcargo.TabIndex = 24;
             // 
-            // btncargo
+            // dataGridViewImageColumn1
             // 
-            this.btncargo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btncargo.BackColor = System.Drawing.Color.SeaGreen;
-            this.btncargo.FlatAppearance.BorderSize = 0;
-            this.btncargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncargo.Location = new System.Drawing.Point(268, 303);
-            this.btncargo.Name = "btncargo";
-            this.btncargo.Size = new System.Drawing.Size(143, 26);
-            this.btncargo.TabIndex = 23;
-            this.btncargo.Text = "Mostrar Cargos";
-            this.btncargo.UseVisualStyleBackColor = false;
-            this.btncargo.Click += new System.EventHandler(this.btncargo_Click);
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::GestionUsuarios.Properties.Resources.lapiz_y_papel;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            // 
+            // Cargos
+            // 
+            this.Cargos.HeaderText = "";
+            this.Cargos.Image = global::GestionUsuarios.Properties.Resources.lapiz_y_papel;
+            this.Cargos.Name = "Cargos";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GestionUsuarios.Properties.Resources.lupa;
+            this.pictureBox1.Location = new System.Drawing.Point(394, 81);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 19);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
             // 
             // MostrarCargo
             // 
@@ -115,6 +133,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbcargo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -123,8 +142,10 @@
 
         private System.Windows.Forms.Panel cargo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btncargo;
         private System.Windows.Forms.DataGridView tbcargo;
         private System.Windows.Forms.TextBox cargo2;
+        private System.Windows.Forms.DataGridViewImageColumn Cargos;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
     }
 }
